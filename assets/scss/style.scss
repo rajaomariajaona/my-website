@@ -1,7 +1,29 @@
-html{
-    scroll-behavior: smooth;
+$navbar-height: 56px;
+
+$height-available: calc(100vh - #{$navbar-height - 1px});
+// $height-available: 100vh;
+
+
+@mixin toCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html {
+  scroll-behavior: smooth;
 }
 
-[id^="container-"]{
-    height: 100vh;
+[id^='container-'] {
+  min-height: $height-available;
+  scroll-margin-top: $navbar-height - 1px;
+}
+
+#container-home {
+  position: relative;
+  div {
+    @include toCenter();
+    font-size: x-large;
+    color: white;
+  }
 }
