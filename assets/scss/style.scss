@@ -1,8 +1,21 @@
-$navbar-height: 56px;
+$navbar-height: 60px;
 
 $height-available: calc(100vh - #{$navbar-height - 1px});
-// $height-available: 100vh;
 
+$primary-color: #455a64;
+
+$secondary-color: #0288d1;
+
+@font-face {
+  font-family: 'DroidSans';
+  src: url('../fonts/DroidSans.ttf');
+  font-weight: normal;
+}
+@font-face {
+    font-family: 'Cabin';
+    src: url('../fonts/Cabin-Regular.ttf');
+    font-weight: normal;
+  }
 
 @mixin toCenter() {
   position: absolute;
@@ -21,9 +34,94 @@ html {
 
 #container-home {
   position: relative;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    url('../images/hero.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: auto, top;
+  height: 100vh;
   div {
     @include toCenter();
-    font-size: x-large;
+    font-family: 'Cabin';
+    font-size: xx-large;
     color: white;
   }
+}
+.progress-bar {
+  background-color: #7986cb;
+}
+.navbar {
+  height: $navbar-height;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: white;
+  .nav-item {
+    height: 100%;
+    .nav-link {
+      text-align: center;
+    }
+    position: relative;
+    text-align: center;
+    & .active {
+      color: $secondary-color !important;
+      transition: width 1s;
+      &::after {
+        background-color: $secondary-color;
+        border-radius: 7px;
+        display: block;
+        height: 4px;
+        animation: navs 0.3s cubic-bezier(0.6, -0.26, 0.48, 1.31);
+        bottom: -24%;
+        left: 0;
+        right: 0;
+        position: absolute;
+        content: '';
+      }
+    }
+  }
+}
+@for $i from 1 to 5{
+    .level-#{$i}{
+        margin-left: 30px * $i ;
+        display: block;
+    }
+}
+ul{
+    li{
+        list-style: none;
+    }
+}
+@keyframes navs {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.card{
+    .container-card-img{
+        position: relative;
+        .container-card-img-button{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 5px;
+            padding-bottom: 5px;
+            button{
+                width: 100%;
+                padding: 0px!important;
+                margin: 0px;
+                color: white;
+                background-color: transparent;
+                border: none;
+            }
+        }
+    }
 }
