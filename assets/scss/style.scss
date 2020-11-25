@@ -12,10 +12,10 @@ $secondary-color: #0288d1;
   font-weight: normal;
 }
 @font-face {
-    font-family: 'Cabin';
-    src: url('../fonts/Cabin-Regular.ttf');
-    font-weight: normal;
-  }
+  font-family: 'Cabin';
+  src: url('../fonts/Cabin-Regular.ttf');
+  font-weight: normal;
+}
 
 @mixin toCenter() {
   position: absolute;
@@ -54,10 +54,18 @@ html {
 .progress-bar {
   background-color: #7986cb;
 }
+.navbar-dark {
+  .nav-item {
+    .nav-link {
+      color: white;
+    }
+  }
+}
 .navbar {
   height: $navbar-height;
   border-bottom: 1px solid #e0e0e0;
   background-color: white;
+
   .nav-item {
     height: 100%;
     .nav-link {
@@ -83,16 +91,16 @@ html {
     }
   }
 }
-@for $i from 1 to 5{
-    .level-#{$i}{
-        margin-left: 30px * $i ;
-        display: block;
-    }
+@for $i from 1 to 5 {
+  .level-#{$i} {
+    margin-left: 30px * $i;
+    display: block;
+  }
 }
-ul{
-    li{
-        list-style: none;
-    }
+ul {
+  li {
+    list-style: none;
+  }
 }
 @keyframes navs {
   0% {
@@ -103,25 +111,25 @@ ul{
   }
 }
 
-.card{
-    .container-card-img{
-        position: relative;
-        .container-card-img-button{
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            padding-top: 5px;
-            padding-bottom: 5px;
-            button{
-                width: 100%;
-                padding: 0px!important;
-                margin: 0px;
-                color: white;
-                background-color: transparent;
-                border: none;
-            }
-        }
+.card {
+  .container-card-img {
+    position: relative;
+    .container-card-img-button {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding-top: 5px;
+      padding-bottom: 5px;
+      button {
+        width: 100%;
+        padding: 0px !important;
+        margin: 0px;
+        color: white;
+        background-color: transparent;
+        border: none;
+      }
     }
+  }
 }

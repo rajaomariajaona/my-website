@@ -20,4 +20,13 @@ function changeColors() {
 $(document).ready(function () {
   changeColors();
   $(window).scroll(changeColors);
+  $(".more-info").click((e) => {
+    let currentButton = $(e.currentTarget)
+    let currentCardBody = currentButton.parent().parent().find(".card-body").first();
+    if(currentCardBody.hasClass("d-none")){
+        currentCardBody.removeClass("d-none")
+    }else{
+        currentCardBody.addClass("d-none")
+    }
+  })
 });
