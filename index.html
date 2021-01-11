@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAJAOMARIA Jaona</title>
+    <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -149,91 +150,16 @@
         </div>
     </div>
     <div id="container-portfolio" class="container py-4">
-        <div class="row justify-content-start">
-            <div class="col-md-3 col-10 my-3">
-                <div class="card">
-                    <div class="container-card-img">
-                        <img class="card-img" src="assets/images/hero.jpg" alt="">
-                        <div class="container-card-img-button mx-0 row justify-content-center">
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-10 my-3">
-                <div class="card">
-                    <div class="container-card-img">
-                        <img class="card-img" src="assets/images/hero.jpg" alt="">
-                        <div class="container-card-img-button mx-0 row justify-content-center">
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-10 my-3">
-                <div class="card">
-                    <div class="container-card-img">
-                        <img class="card-img" src="assets/images/hero.jpg" alt="">
-                        <div class="container-card-img-button mx-0 row justify-content-center">
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-10 my-3">
-                <div class="card">
-                    <div class="container-card-img">
-                        <img class="card-img" src="assets/images/hero.jpg" alt="">
-                        <div class="container-card-img-button mx-0 row justify-content-center">
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-10 my-3">
-                <div class="card">
-                    <div class="container-card-img">
-                        <img class="card-img" src="assets/images/hero.jpg" alt="">
-                        <div class="container-card-img-button mx-0 row justify-content-center">
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-10 my-3">
-                <div class="card">
-                    <div class="container-card-img">
-                        <img class="card-img" src="assets/images/hero.jpg" alt="">
-                        <div class="container-card-img-button mx-0 row justify-content-center">
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                            <div class="col-4"><button class="btn"> GO </button></div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </div>
-                </div>
-            </div>
+        <nav id="nav-portfolio">
+            <ul class="nav">
+                <li class="nav-link"><a onclick="filter(event,'*')" href="#" class="bg-transparent btn-portfolio active">Tout</a></li>
+                <li class="nav-link"><a onclick="filter(event,'.web')" href="#" class="bg-transparent btn-portfolio">Web</a></li>
+                <li class="nav-link"><a onclick="filter(event,'.mobile')" href="#" class="bg-transparent btn-portfolio">Mobile</a></li>
+                <li class="nav-link"><a onclick="filter(event,'.desktop')" href="#" class="bg-transparent btn-portfolio">Desktop</a></li>
+            </ul>
+        </nav>
+        <div id="cards" class="grid row justify-content-md-start justify-content-center">
+            
         </div>
     </div>
     <div id="container-about">
@@ -241,6 +167,7 @@
     <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 

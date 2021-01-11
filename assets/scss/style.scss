@@ -6,16 +6,18 @@ $primary-color: #455a64;
 
 $secondary-color: #0288d1;
 
+$card-radius: 8px;
+
 @font-face {
-  font-family: 'DroidSans';
-  src: url('../fonts/DroidSans.ttf');
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Regular.ttf');
   font-weight: normal;
 }
 @font-face {
-  font-family: 'Cabin';
-  src: url('../fonts/Cabin-Regular.ttf');
-  font-weight: normal;
-}
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito-Bold.ttf');
+    font-weight: bold;
+  }
 
 @mixin toCenter() {
   position: absolute;
@@ -23,6 +25,12 @@ $secondary-color: #0288d1;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+* {
+  font-family: 'Nunito';
+  color: $primary-color;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -46,9 +54,15 @@ html {
   height: 100vh;
   div {
     @include toCenter();
-    font-family: 'Cabin';
+    font-family: 'Nunito';
     font-size: xx-large;
     color: white;
+  }
+  .text-center{
+    color: white!important;
+    strong{
+        color: white!important;
+    }
   }
 }
 .progress-bar {
@@ -62,6 +76,7 @@ html {
   }
 }
 .navbar {
+  transition: 0.2s;
   height: $navbar-height;
   border-bottom: 1px solid #e0e0e0;
   background-color: white;
@@ -104,32 +119,66 @@ ul {
 }
 @keyframes navs {
   0% {
-    width: 0%;
+    margin-right: 50%;
+    margin-left: 50%;
   }
   100% {
-    width: 100%;
+    margin-right: 0%;
+    margin-left: 0%;
   }
 }
 
 .card {
+  border-radius: $card-radius !important;
+
   .container-card-img {
     position: relative;
+    .card-img {
+      border-radius: $card-radius !important;
+    }
     .container-card-img-button {
-      width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      padding-top: 5px;
-      padding-bottom: 5px;
-      button {
+      transition: 0.3s;
+      display: none;
+    }
+  }
+  &:hover {
+    .container-card-img {
+      position: relative;
+      .card-img {
+        border-radius: $card-radius !important;
+      }
+      .container-card-img-button {
+        display: flex;
         width: 100%;
-        padding: 0px !important;
-        margin: 0px;
-        color: white;
-        background-color: transparent;
-        border: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-bottom-left-radius: $card-radius;
+        border-bottom-right-radius: $card-radius;
+        button {
+          width: 100%;
+          padding: 0px !important;
+          margin: 0px;
+          color: white;
+          background-color: transparent;
+          border: none;
+        }
       }
     }
   }
+}
+#nav-portfolio{
+    ul.nav{
+        .btn-portfolio{
+            font-size: larger;
+            color: $primary-color;
+            cursor: hand;
+        }
+        .active{
+            font-weight: bold;
+        }
+    }
 }
