@@ -19,19 +19,22 @@ function changeColors() {
 
 let cards = [
   {
-    type: ["web","mobile"],
+    title: "Title",
+    type: ["web", "mobile"],
     image: "assets/images/hero.jpg",
     body: "Plateforme de Livraison <strong>Mtatitra </strong>",
     details: "",
   },
   {
-    type: ["web","mobile"],
+    title: "Title",
+    type: ["web", "mobile"],
     image: "assets/images/hero.jpg",
     body:
       "<strong>Markovid</strong> - Carte de representation des zones chaudes Covid à Madagascar",
     details: "",
   },
   {
+    title: "Title",
     type: ["mobile"],
     image: "assets/images/hero.jpg",
     body: "Application de gestion du centre <strong> Berisheba</strong>",
@@ -39,6 +42,7 @@ let cards = [
   },
 
   {
+    title: "Title",
     type: ["web"],
     image: "assets/images/hero.jpg",
     body:
@@ -46,7 +50,8 @@ let cards = [
     details: "",
   },
   {
-    type: ["web","mobile"],
+    title: "Title",
+    type: ["web", "mobile"],
     image: "assets/images/hero.jpg",
     body:
       "<strong>Covid Tracker</strong> - Troisième place lors du <strong>Hackoragna 2020</strong>",
@@ -55,17 +60,18 @@ let cards = [
 ];
 
 function generateCard(obj) {
-    let type = "";
-    for(const t of obj.type){
-        type += t + " ";
-    }
+  let type = "";
+  for (const t of obj.type) {
+    type += t + " ";
+  }
   return `<div class="col-md-3 col-10 my-3 grid-item ${type}" data-category="${type}">
     <div class="card">
         <div class="container-card-img">
             <img class="card-img" src="${obj.image}" alt="">
             <div class="container-card-img-button mx-0 row justify-content-center">
-                <div class="col-4"><button class="btn"><i class="fa fa-images"></i></button></div>
-                <div class="col-4"><button class="btn"><i class="fa fa-info-circle"></i></button></div>
+                <div>
+                   <h3>${obj.title}</h3>
+                </div>
             </div>
         </div>
         <div class="card-body">
@@ -98,16 +104,15 @@ $(document).ready(function () {
   $("#cards").html(cardsDom);
 });
 
-
 function filter(event, type) {
-    event.preventDefault();
-    $(".btn-portfolio").removeClass("active");
-    var $grid = $(".grid").isotope({
-        // options
-        itemSelector: ".grid-item",
-        layoutMode: "fitRows",
-      });
-    $(event.currentTarget).addClass("active");
-    console.log(type);
-    $grid.isotope({ filter: type })
+  event.preventDefault();
+  $(".btn-portfolio").removeClass("active");
+  var $grid = $(".grid").isotope({
+    // options
+    itemSelector: ".grid-item",
+    layoutMode: "fitRows",
+  });
+  $(event.currentTarget).addClass("active");
+  console.log(type);
+  $grid.isotope({ filter: type });
 }
