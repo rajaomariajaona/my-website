@@ -14,10 +14,15 @@ $card-radius: 8px;
   font-weight: normal;
 }
 @font-face {
-    font-family: 'Nunito';
-    src: url('../fonts/Nunito-Bold.ttf');
-    font-weight: bold;
-  }
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-Bold.ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('../fonts/Nunito-ExtraBold.ttf');
+  font-weight: 900;
+}
 
 @mixin toCenter() {
   position: absolute;
@@ -29,6 +34,9 @@ $card-radius: 8px;
 * {
   font-family: 'Nunito';
   color: $primary-color;
+  strong {
+    font-weight: bold;
+  }
 }
 
 html {
@@ -46,7 +54,6 @@ html {
       0deg,
       rgba(0, 0, 0, 0.7) 0%,
       rgba(0, 0, 0, 0.7) 100%
-      
     ),
     url('../images/hero.jpg');
   background-repeat: no-repeat, no-repeat;
@@ -59,10 +66,10 @@ html {
     font-size: xx-large;
     color: white;
   }
-  .text-center{
-    color: white!important;
-    strong{
-        color: white!important;
+  .text-center {
+    color: white !important;
+    strong {
+      color: white !important;
     }
   }
 }
@@ -171,15 +178,21 @@ ul {
     }
   }
 }
-#nav-portfolio{
-    ul.nav{
-        .btn-portfolio{
-            font-size: larger;
-            color: $primary-color;
-            cursor: hand;
-        }
-        .active{
-            font-weight: bold;
-        }
+#nav-portfolio {
+  ul.nav {
+    .btn-portfolio {
+      font-size: larger;
+      color: $primary-color;
+      cursor: hand;
     }
+    .active {
+      font-weight: bold;
+    }
+  }
+}
+
+#container-resume {
+  span.date {
+    font-weight: 900;
+  }
 }
