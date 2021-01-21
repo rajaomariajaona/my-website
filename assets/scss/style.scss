@@ -31,12 +31,8 @@ $card-radius: 8px;
   transform: translate(-50%, -50%);
 }
 
-* {
-  font-family: 'Nunito';
-  color: $primary-color;
-  strong {
-    font-weight: bold;
-  }
+span[class^='word'] {
+  color: white !important;
 }
 
 html {
@@ -66,12 +62,10 @@ html {
     font-size: xx-large;
     color: white;
   }
-  .text-center {
+  * {
     color: white !important;
-    strong {
-      color: white !important;
-    }
   }
+  
 }
 .progress-bar {
   background-color: #7986cb;
@@ -156,6 +150,7 @@ ul {
       opacity: 0;
       * {
         color: white !important;
+        cursor: pointer;
       }
       div {
         position: absolute;
@@ -209,4 +204,24 @@ ul {
   span.date {
     font-weight: 900;
   }
+}
+.owl-carousel {
+  display: none;
+}
+
+* {
+  font-family: 'Nunito';
+  color: $primary-color;
+  strong {
+    font-weight: bold;
+  }
+  .fancybox-container {
+    * {
+      color: white !important;
+    }
+  }
+}
+
+blockquote{
+    text-align: justify;
 }
