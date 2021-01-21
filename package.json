@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/rajaomariajaona/my-website/issues"
   },
-  "homepage": "https://github.com/rajaomariajaona/my-website#readme"
+  "homepage": "https://github.com/rajaomariajaona/my-website#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uncss": "^1.0.6",
+    "node-sass": "^5.0.0"
+  }
 }

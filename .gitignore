@@ -1,2 +1,6 @@
 assets/css/style.css
 assets/css/style.css.map
+node_modules/
+assets/tmpcss/
+assets/images/me
+*.mp4
