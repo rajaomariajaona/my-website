@@ -15,13 +15,14 @@ gulp.task("sass", function (cb) {
       )
     )
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./assets/css"));
+    .pipe(gulp.dest("./assets/css"))
+    .pipe(browserSync.stream());
 });
 gulp.task("sass:watch", function (cb) {
   return gulp.watch("./assets/scss/*.scss", gulp.series("sass"));
 });
 
-gulp.task("livereload", function () {
+gulp.task("serve", function () {
   browserSync.init({
     server: {
       baseDir: "./",
@@ -31,8 +32,10 @@ gulp.task("livereload", function () {
       port: 34568,
     },
   });
-  gulp.watch(".", gulp.series(function() {
-    browserSync.reload()
-  }))
 });
-exports.default = gulp.parallel("sass:watch", "livereload");
+gulp.task("reload", function () {
+  gulp
+    .watch(["./index.html", "./assets/css/*", "./assets/js/*"])
+    .on("change", browserSync.reload);
+});
+exports.default = gulp.parallel("serve", "sass:watch", "reload");
