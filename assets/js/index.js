@@ -30,7 +30,7 @@ let cards = [
       {
         src: "assets/images/berisheba/1.jpg",
         opts: {
-          caption: "Acceuil",
+          caption: "Accueil",
         },
       },
       {
@@ -84,7 +84,7 @@ let cards = [
       {
         src: "assets/images/berisheba/10.png",
         opts: {
-          caption: "Acceuil backoffice",
+          caption: "Accueil backoffice",
         },
       },
       {
@@ -121,7 +121,7 @@ let cards = [
       {
         src: "assets/images/agrizara/1.mp4",
         opts: {
-          caption: "Acceuil",
+          caption: "Accueil",
         },
       },
       {
@@ -222,7 +222,7 @@ let cards = [
       {
         src: "assets/images/rda/1.mp4",
         opts: {
-          caption: "Demo Machine virtuelle: Controle Clavier, Souris, Partage presse papier bidirectionnel, Partage Fichier",
+          caption: "Démo Machine virtuelle: Contrôle Clavier, Souris, Partage presse papier bidirectionnel, Partage Fichier",
         },
       },
     ],
