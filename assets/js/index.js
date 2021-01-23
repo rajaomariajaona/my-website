@@ -222,13 +222,7 @@ let cards = [
       {
         src: "assets/images/rda/1.mp4",
         opts: {
-          caption: "Control",
-        },
-      },
-      {
-        src: "assets/images/rda/2.mp4",
-        opts: {
-          caption: "Transfer fichier",
+          caption: "Demo Machine virtuelle: Controle Clavier, Souris, Partage presse papier bidirectionnel, Partage Fichier",
         },
       },
     ],
@@ -264,11 +258,17 @@ function generateCard(obj, index) {
 </div>`;
 }
 
-$(document).ready(function () {
+$(window).bind("load", function () {
+  $("body").removeClass("disable-scroll");
+  $("#loader").attr("style", "display: none");
   var typed = new Typed(".test", {
     stringsElement: ".text-home",
     typeSpeed: 30,
   });
+  new WOW().init();
+});
+
+$(document).ready(function () {
   changeColors();
   $(window).scroll(changeColors);
   $(".more-info").click((e) => {

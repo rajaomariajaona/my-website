@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RAJAOMARIA Jaona</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
     <link rel="stylesheet" href="assets/css/all.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="assets/css/brands.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body data-spy="scroll" data-target="#navbar" data-offset="61">
+<body data-spy="scroll" data-target="#navbar" data-offset="61" class="disable-scroll">
+
     <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top">
         <a class="navbar-brand" href="#">RJ</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -57,47 +64,50 @@
     <div class="container py-4" id="container-about">
         <div class="row">
             <div class="col-12 col-md-6 py-3 text-center">
-                <img class="img-thumbnail w-75" src="assets/images/me2.jpg" alt="">
+                <img class="img-thumbnail w-75  wow slideInLeft" src="assets/images/me2.jpg" alt="">
             </div>
-            <div class="col-12 col-md-6 py-3">
-                <h3 class="text-center"> À propos </h3>
-                <br>
-                <blockquote class="blockquote">
-                    L'informatique n'est pas seulement un emploi, c'est d'abord une passion, un art. Confiez-moi vos
-                    projets, je les réaliserai avec soin, en suivant toutes les étapes nécessaires de la conception au
-                    déploiement.
-                </blockquote>
-                <br>
-                <ul id="contacts">
-                    <li class="pb-2">
-                        <i class="fa fab fa-2x fa-facebook mr-2"></i>
-                        <a href="http://web.facebook.com/rajaomariajaona" target="_blank" rel="noopener noreferrer">
-                            Rajaomaria Jaona </a>
-                    </li>
-                    <li class="pb-2">
-                        <i class="fa fa-phone fa-2x mr-2"></i>
-                        +261 34 48 220 17
-                    </li>
-                    <li class="pb-2"><i class="fa fa-envelope fa-2x mr-2"></i>
-                        <a href="mailto:rajaomariajaona11@gmail.com">rajaomariajaona11@gmail.com</a>
-                    </li>
-                    <li class="pb-2">
-                        <i class="fa fa-map-marker-alt fa-2x mr-2"></i>
-                        IB 90 Andraivato Ambatofotsy Antananarivo 102 Madagascar
-                    </li>
-                </ul>
-                <div class="text-md-left text-center">
-                    <a class="btn color-primary border-primary mx-3" href="assets/files/cv.pdf" target="_blank"
-                        rel="noopener noreferrer">Telecharger mon CV</a>
+            <div class="col-12 col-md-6 py-3 ">
+                <div class="wow slideInRight">
+                    <h3 class="text-center"> À propos </h3>
+                    <br>
+                    <blockquote class="blockquote">
+                        L'informatique n'est pas seulement un emploi, c'est d'abord une passion, un art. Confiez-moi vos
+                        projets, je les réaliserai avec soin, en suivant toutes les étapes nécessaires de la conception
+                        au
+                        déploiement.
+                    </blockquote>
+                    <br>
+                    <ul id="contacts">
+                        <li class="pb-2">
+                            <i class="fa fab fa-2x fa-facebook mr-2"></i>
+                            <a href="http://web.facebook.com/rajaomariajaona" target="_blank" rel="noopener noreferrer">
+                                Rajaomaria Jaona </a>
+                        </li>
+                        <li class="pb-2">
+                            <i class="fa fa-phone fa-2x mr-2"></i>
+                            +261 34 48 220 17
+                        </li>
+                        <li class="pb-2"><i class="fa fa-envelope fa-2x mr-2"></i>
+                            <a href="mailto:rajaomariajaona11@gmail.com">rajaomariajaona11@gmail.com</a>
+                        </li>
+                        <li class="pb-2">
+                            <i class="fa fa-map-marker-alt fa-2x mr-2"></i>
+                            IB 90 Andraivato Ambatofotsy Antananarivo 102 Madagascar
+                        </li>
+                    </ul>
+                    <div class="text-md-left text-center">
+                        <a class="btn color-primary border-primary mx-3" href="assets/files/cv.pdf" target="_blank"
+                            rel="noopener noreferrer">Telecharger mon CV</a>
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
     <div id="container-skill">
-        <div class="container py-5">
+        <div class="container py-5 ">
             <div class="row">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 wow slideInUp">
                     <h3 class="level-1">Technologies</h3>
                     <h4 class="level-2">Langages</h4>
                     <ul class="level-3 p-0">
@@ -174,7 +184,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12 wow slideInUp">
                     <h3 class="level-1">Outils</h3>
                     <h4 class="level-2">IDE</h4>
                     <span class="level-3 pb-3">
@@ -203,7 +213,7 @@
 
     <div id="container-resume" class="container py-4">
         <div class="row">
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 col-12 wow slideInUp">
 
                 <div id="experience" class="my-3">
                     <h3>Expériences professionnelles</h3>
@@ -241,7 +251,8 @@
                                 d’Innovation Technologique <a href="http://www.emit.mg" target="_blank"
                                     rel="noopener noreferrer"> <i class="fa fa-sm fa-external-link-alt"></i> </a>
                                 (Université de Fianarantsoa <a href="http://univ.fi" target="_blank"
-                                    rel="noopener noreferrer"> <i class="fa fa-sm fa-external-link-alt"></i> </a>)</p>
+                                    rel="noopener noreferrer"> <i class="fa fa-sm fa-external-link-alt"></i> </a>)
+                            </p>
                         </li>
                         <li> <span class="date">2016-2017</span> <strong> Terminal C </strong>
                             <p>Au Lycée Moderne Ampefiloha
@@ -250,7 +261,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 col-12 wow slideInUp">
 
                 <div id="prix" class="my-3">
                     <h3>Prix obtenus</h3>
@@ -278,7 +289,7 @@
             </div>
         </div>
     </div>
-    <div id="container-portfolio" class="container py-4">
+    <div id="container-portfolio" class="container py-4 wow slideInUp">
         <nav id="nav-portfolio">
             <ul class="nav">
                 <li class="nav-link"><a onclick="filter(event,'*')" href="#"
@@ -295,12 +306,26 @@
 
         </div>
     </div>
+    <div id="loader">
+        <div id="loader-container">
+            <div id="loader-subcontainer">
+                <div class="sk-folding-cube">
+                    <div class="sk-cube1 sk-cube"></div>
+                    <div class="sk-cube2 sk-cube"></div>
+                    <div class="sk-cube4 sk-cube"></div>
+                    <div class="sk-cube3 sk-cube"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/jquery-3.3.1.slim.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <script src="assets/js/jquery.fancybox.min.js"></script>
     <script src="assets/js/typed.js"></script>
+    <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 
