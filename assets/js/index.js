@@ -19,86 +19,90 @@ function changeColors() {
 
 let cards = [
   {
-    id: 1,
-    title: "Cliquez pour voir plus",
-    type: ["web", "mobile"],
-    image: "assets/images/hero.jpg",
-    body: "Plateforme de Livraison <strong>Mtatitra </strong>",
-    details: "",
-    captures: [
-      {
-        src: "assets/images/hero.jpg",
-        opts: {
-          caption: "1",
-        },
-      },
-      {
-        src: "assets/images/hero.jpg",
-        opts: {
-          caption: "2",
-        },
-      },
-      {
-        src: "assets/images/hero.jpg",
-        opts: {
-          caption: "3",
-        },
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Cliquez pour voir plus",
-    type: ["web", "mobile"],
-    image: "assets/images/hero.jpg",
-    body:
-      "<strong>Markovid</strong> - Carte de representation des zones chaudes Covid à Madagascar",
-    details: "",
-    captures: [
-      {
-        src: "assets/images/hero.jpg",
-        opts: {
-          caption: "1",
-        },
-      },
-      {
-        src: "assets/images/hero.jpg",
-        opts: {
-          caption: "2",
-        },
-      },
-      {
-        src: "assets/images/hero.jpg",
-        opts: {
-          caption: "3",
-        },
-      },
-    ],
-  },
-  {
     id: 3,
     title: "Cliquez pour voir plus",
     type: ["mobile"],
-    image: "assets/images/hero.jpg",
+    technologie: ["Nodejs", "Flutter", "Socket.io"],
+    image: "assets/images/berisheba/acceuil.jpg",
     body: "Application de gestion du centre <strong> Berisheba</strong>",
     details: "",
     captures: [
       {
-        src: "assets/images/hero.jpg",
+        src: "assets/images/berisheba/1.jpg",
         opts: {
-          caption: "1",
+          caption: "Acceuil",
         },
       },
       {
-        src: "assets/images/hero.jpg",
+        src: "assets/images/berisheba/2.jpg",
         opts: {
-          caption: "2",
+          caption: "Page Client",
         },
       },
       {
-        src: "assets/images/hero.jpg",
+        src: "assets/images/berisheba/3.jpg",
         opts: {
-          caption: "3",
+          caption: "Details Client",
+        },
+      },
+      {
+        src: "assets/images/berisheba/4.jpg",
+        opts: {
+          caption: "Choix couleur Reservation",
+        },
+      },
+      {
+        src: "assets/images/berisheba/5.jpg",
+        opts: {
+          caption: "Page Reservation",
+        },
+      },
+      {
+        src: "assets/images/berisheba/6.jpg",
+        opts: {
+          caption: "Page Reservation",
+        },
+      },
+      {
+        src: "assets/images/berisheba/7.png",
+        opts: {
+          caption: "Facture avec exportation et partage",
+        },
+      },
+      {
+        src: "assets/images/berisheba/8.jpg",
+        opts: {
+          caption: "Page Ustensile",
+        },
+      },
+      {
+        src: "assets/images/berisheba/9.jpg",
+        opts: {
+          caption: "Statistiques par mois",
+        },
+      },
+      {
+        src: "assets/images/berisheba/10.png",
+        opts: {
+          caption: "Acceuil backoffice",
+        },
+      },
+      {
+        src: "assets/images/berisheba/11.png",
+        opts: {
+          caption: "Authentification par appareil",
+        },
+      },
+      {
+        src: "assets/images/berisheba/12.jpg",
+        opts: {
+          caption: "Demande d'accès",
+        },
+      },
+      {
+        src: "assets/images/berisheba/realtime.mp4",
+        opts: {
+          caption: "Temps réel",
         },
       },
     ],
@@ -108,7 +112,8 @@ let cards = [
     id: 4,
     title: "Cliquez pour voir plus",
     type: ["web"],
-    image: "assets/images/agrizara/acceuil.gif",
+    technologie: ["Bootstrap", "Animejs", "SVG"],
+    image: "assets/images/agrizara/acceuil.jpg",
     body:
       "<strong>AgriZara</strong> - Première place lors du <strong>FrontEnd Award 2019</strong> (organisé par Techzara)",
     details: "",
@@ -143,6 +148,7 @@ let cards = [
     id: 5,
     title: "Cliquez pour voir plus",
     type: ["web", "mobile"],
+    technologie: ["Nodejs", "Angular", "Flutter"],
     image: "assets/images/covid/acceuil.png",
     body:
       "<strong>Covid Tracker</strong> - Troisième place lors du <strong>Hackoragna 2020</strong>",
@@ -208,9 +214,9 @@ let cards = [
     id: 6,
     title: "Cliquez pour voir plus",
     type: ["desktop"],
+    technologie: ["Java", "JavaFX", "Socket"],
     image: "assets/images/rda/acceuil.jpg",
-    body:
-      "<strong>RDA</strong> - Remote Desktop App",
+    body: "<strong>RDA</strong> - Remote Desktop App",
     details: "",
     captures: [
       {
@@ -234,9 +240,15 @@ function generateCard(obj, index) {
   for (const t of obj.type) {
     type += t + " ";
   }
-  return `<div class="col-md-3 col-10 my-3 grid-item ${type}" onclick="javascript:openFancy(${index});" data-src="#owl${obj.id}" data-category="${type}">
+  let techs = "";
+  for (let i = 0; i < obj.technologie.length; i++) {
+    techs += `<span class="badge badge-pill badge-${i + 1} techs">${
+      obj.technologie[i]
+    }</span>`;
+  }
+  return `<div class="col-md-3 col-10 my-3 grid-item ${type}"  data-src="#owl${obj.id}" data-category="${type}">
     <div class="card">
-        <div class="container-card-img">
+        <div class="container-card-img" onclick="javascript:openFancy(${index});">
             <img class="card-img" src="${obj.image}" alt="">
             <div class="container-card-img-button mx-0 row justify-content-center">
                 <div>
@@ -245,18 +257,19 @@ function generateCard(obj, index) {
             </div>
         </div>
         <div class="card-body">
-        ${obj.body}
+        ${obj.body} <br> <br>
+        ${techs}
         </div>
     </div>
 </div>`;
 }
 
 $(document).ready(function () {
-    var typed = new Typed('.test', {
-        stringsElement: '.text-home',
-        typeSpeed: 30
-    });
-    changeColors();
+  var typed = new Typed(".test", {
+    stringsElement: ".text-home",
+    typeSpeed: 30,
+  });
+  changeColors();
   $(window).scroll(changeColors);
   $(".more-info").click((e) => {
     let currentButton = $(e.currentTarget);
@@ -307,15 +320,16 @@ function filter(event, type) {
 }
 function openFancy(index) {
   $.fancybox.open(cards[index].captures, {
-    buttons: [
-      "zoom",
-      "slideShow",
-      "fullScreen",
-      "thumbs",
-      "close",
-    ],
+    buttons: ["zoom", "slideShow", "fullScreen", "thumbs", "close"],
     protect: true,
     preventCaptionOverlap: true,
     loop: true,
+    video: {
+      tpl:
+        '<video class="fancybox-video" controls controlsList="nodownload" poster="{{poster}}" loop>' +
+        '<source src="{{src}}" type="{{format}}" />' +
+        'Sorry, your browser doesn\'t support embedded videos, <a href="{{src}}">download</a> and watch with your favorite video player!' +
+        "</video>",
+    },
   });
 }

@@ -4,3 +4,4 @@ node_modules/
 assets/tmpcss/
 assets/images/me
 *.mp4
+*.bak
