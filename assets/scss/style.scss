@@ -102,17 +102,19 @@ html {
     & .active {
       color: $secondary-color !important;
       transition: width 1s;
-      &::after {
-        background-color: $secondary-color;
-        border-radius: 7px;
-        display: block;
-        height: 4px;
-        animation: navs 0.3s cubic-bezier(0.6, -0.26, 0.48, 1.31);
-        bottom: -24%;
-        left: 0;
-        right: 0;
-        position: absolute;
-        content: '';
+      @media (min-width: 767px) {
+        &::after {
+          background-color: $secondary-color;
+          border-radius: 7px;
+          display: block;
+          height: 4px;
+          animation: navs 0.3s cubic-bezier(0.6, -0.26, 0.48, 1.31);
+          bottom: -24%;
+          left: 0;
+          right: 0;
+          position: absolute;
+          content: '';
+        }
       }
     }
   }
@@ -419,15 +421,28 @@ h1.title-section {
   bottom: 0;
   z-index: 9999;
   #loader-container {
-      height: 100%;
-      width: 100%;
-      position: relative;
-      #loader-subcontainer{
-        @include toCenter();
-      }
+    height: 100%;
+    width: 100%;
+    position: relative;
+    #loader-subcontainer {
+      @include toCenter();
+    }
   }
   background-color: $primary-color;
 }
-.disable-scroll{
-    overflow: hidden;
+.disable-scroll {
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .navbar-dark {
+    .show {
+      .nav-link {
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+  .navbar-collapse {
+    background-color: white;
+  }
 }
