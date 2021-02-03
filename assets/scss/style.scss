@@ -30,6 +30,10 @@ $card-radius: 8px;
   src: url('../fonts/Nunito-ExtraBold.ttf');
   font-weight: 900;
 }
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url('../fonts/PermanentMarker-Regular.ttf');
+}
 
 @mixin toCenter() {
   position: absolute;
@@ -445,4 +449,13 @@ h1.title-section {
   .navbar-collapse {
     background-color: white;
   }
+}
+.navbar-brand{
+    font-family: 'PermanentMarker';
+}
+
+.navbar-light{
+    .navbar-brand{
+        color: $secondary-color;
+    }
 }
