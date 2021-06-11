@@ -19,6 +19,41 @@ function changeColors() {
 
 let cards = [
   {
+    id: 2,
+    title: "Cliquez pour voir plus",
+    type: ["web"],
+    technologie: ["Yii", "MongoDB", "D3JS"],
+    image: "assets/images/communecter/communecter.jpg",
+    body: "Module Graph de <strong> Communecter</strong>",
+    details: "",
+    captures: [
+      {
+        src: "assets/images/communecter/mindmap.png",
+        opts: {
+          caption: "Mindmap Graph",
+        },
+      },
+      {
+        src: "assets/images/communecter/network.png",
+        opts: {
+          caption: "Network Graph",
+        },
+      },
+      {
+        src: "assets/images/communecter/circle.png",
+        opts: {
+          caption: "Circle Graph",
+        },
+      },
+      {
+        src: "assets/images/communecter/relation.png",
+        opts: {
+          caption: "Relation Graph",
+        },
+      },
+    ],
+  },
+  {
     id: 3,
     title: "Cliquez pour voir plus",
     type: ["mobile"],
